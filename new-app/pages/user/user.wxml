@@ -1,0 +1,22 @@
+<!--pages/user/user.wxml-->
+<view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+    <text class="introduction">头像</text>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+  </view>
+  <view class="userinfo">
+    <block>
+      <text class="introduction">名字</text>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="userinfo" bindtap="postArticle">
+    <block>
+      <text class="introduction">功能</text>
+      <text class="userinfo-nickname">文章发布 ></text>
+    </block>
+  </view>
+</view>

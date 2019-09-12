@@ -1,0 +1,55 @@
+/* pages/home/home.wxss */
+.search_wrap{
+  width: 100%;
+  height: 100rpx;
+  padding-top: 20rpx;
+  background: #ededed;
+}
+.search{
+  width: 80%;
+  height: 80rpx;
+  background: white;
+  margin: auto;
+  position: relative;
+  padding-left: 60rpx;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+}
+icon{
+  position: absolute;
+  left: 20rpx;
+  top: 16rpx;
+}
+.search-input{
+  width: 100%;
+  height: 80rpx;
+  display: inline-block;
+}
+.banner{
+  width: 100%;
+  box-sizing: border-box;
+  padding-left:40rpx;
+}
+.banner .forum{
+  margin-top:20rpx; 
+  padding-right: 40rpx;
+  padding-bottom: 25rpx;
+  border-bottom: 1rpx solid #dedede; 
+}
+.banner .forum .title{
+  font-weight: 600;
+  height: 90rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.banner .forum .text{
+  height: 105rpx;
+  overflow: hidden;
+  font-size: 26rpx;
+  text-indent: 52rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}

@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">用户授权登录 </button>
+</view>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/home/home.wxml-->
+<view class="wrap">
+  <view class="search_wrap">
+    <view class="search">
+      <icon type="search" size="14"/>
+      <input type="text" id="search-box" class="search-input" value="{{inputVal}}" placeholder="请输入您想要搜索的关键字" bindinput="inputTyping" bindconfirm="search"/>
+    </view>
+  </view>
+  <view class="banner">
+    <view class="forum" wx:for='{{forumList}}' wx:key='index' bindtap="seeDetails" data-id="{{item.id}}">
+      <view class="title">{{item.title}}</view>
+      <text class="text">{{item.text}}</text>
+    </view>
+  </view>
+</view>

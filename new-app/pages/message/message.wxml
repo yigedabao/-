@@ -1,0 +1,38 @@
+<!--pages/message/message.wxml-->
+<view>
+  <view class="nav">
+    <view class="nav-btn {{listShow ? 'nav-font-color':''}}" bindtap="find" data-type="1">找失主</view>
+    <view class="nav-border"></view>
+    <view class="nav-btn {{!listShow ? 'nav-font-color':''}}" bindtap="find" data-type="2">寻失物</view>
+  </view>
+  <view wx:if="{{ listShow }}">
+    <view class="article-list" wx:for="{{articleList}}" wx:key="{{item.id}}">
+      <view class="article-list-img">
+        <image src="{{item.url}}"></image>
+      </view>
+      <view class="article-list-text">
+        <view class="article-list-text-tital">
+          {{item.tital}}
+        </view>
+        <view class="article-list-text-content">
+          {{item.content}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+      <view class="article-list" wx:for="{{articleLists}}" wx:key="{{item.id}}">
+      <view class="article-list-img">
+        <image src="{{item.url}}"></image>
+      </view>
+      <view class="article-list-text">
+        <view class="article-list-text-tital">
+          {{item.tital}}
+        </view>
+        <view class="article-list-text-content">
+          {{item.content}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
