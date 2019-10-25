@@ -3,6 +3,9 @@
   <view class="main">
     <view class="title">{{title}}</view>
     <view class="text">{{text}}</view>
+    <view class="images" wx:for='{{postUrlList}}' wx:key="{{idnex}}" >
+      <image src="{{item}}"></image>
+    </view>
   </view>
   <view class="commentarea" wx:for='{{commentList}}' wx:key="{{idnex}}">
     <view class="name">
@@ -14,6 +17,6 @@
   </view>
   <view class="inputbox">
     <input type="text" class="comment" value="{{inputVal}}" placeholder="请输入您想要搜索的关键字" bindinput="inputTyping" bindconfirm="search"/>
-    <text style="{{inputVal ? 'color:#4a8ed1':'color:#c5c5c5'}}">发布</text>
+    <text style="{{inputVal ? 'color:#4a8ed1':'color:#c5c5c5'}}" bindtap="release">发布</text>
   </view>
 </view>

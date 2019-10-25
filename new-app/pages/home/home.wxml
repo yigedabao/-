@@ -4,12 +4,13 @@
     <view class="search">
       <icon type="search" size="14"/>
       <input type="text" id="search-box" class="search-input" value="{{inputVal}}" placeholder="请输入您想要搜索的关键字" bindinput="inputTyping" bindconfirm="search"/>
+      <view class="search-btn" bindtap="cancel">取消</view>
     </view>
   </view>
   <view class="banner">
-    <view class="forum" wx:for='{{forumList}}' wx:key='index' bindtap="seeDetails" data-id="{{item.id}}">
-      <view class="title">{{item.title}}</view>
-      <text class="text">{{item.text}}</text>
+    <view class="forum" wx:for='{{forumList}}' wx:key='index' bindtap="seeDetails" data-postNo="{{item.postNo}}">
+      <view class="title">{{item.postName}}</view>
+      <text class="text">{{item.postDetail}}</text>
     </view>
   </view>
 </view>

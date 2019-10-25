@@ -1,2 +1,40 @@
-<!--pages/user/release.wxml-->
-<text>pages/user/release.wxml</text>
+<view>
+  <view class="article-input-area">
+
+    <!-- 问题标题区域  -->
+    <view class="article-title-wrap">
+      <!-- 标题输入框 -->
+      <input class="article-title" placeholder="请输入标题" maxlength="40" placeholder-style="color:#b3b3b3;font-size:16px;" bindinput="handleTitleInput"></input>
+      <!-- 标题输入字数统计 -->
+      <view class="article-input-counter">{{titleCount}}/40</view>
+    </view>
+
+    <!-- 问题正文区域  -->
+    <view class="content-cell">
+      <view class="content-cell__bd">
+        <!-- 多行输入框 -->
+        <textarea class="content-textarea" placeholder="请输入正文内容..." maxlength="500" placeholder-style="color:#b3b3b3;font-size:18px;" bindinput="handleContentInput" />
+        <!-- 正文输入字数统计 -->
+        <view class="content-textarea-counter">{{contentCount}}/500</view>
+      </view>
+    </view>
+
+  </view>
+
+
+  <view class="imgbtn-wrap">
+    <block wx:for="{{images}}" wx:key="{{item}}">
+      <view class="q-image-wrap">
+        <!-- 图片缩略图  -->
+        <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+        <!-- 移除图片的按钮  -->
+        <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">
+          <icon type="clear" size="20" />
+        </view>
+      </view>
+    </block>
+    <view class="imgbtn-addimg" wx:if="{{images.length < 9}}" bindtap="chooseImage">+</view>
+  </view>
+
+  <button class="article-btn" type="primary" bindtap="submitForm">发布</button>
+</view>

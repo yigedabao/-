@@ -1,12 +1,19 @@
 <!--pages/message/message.wxml-->
 <view>
+  <view class="search_wrap">
+      <view class="search">
+        <icon type="search" size="14"/>
+        <input type="text" id="search-box" class="search-input" value="{{inputVal}}" placeholder="请输入您想要搜索的关键字" bindinput="inputTyping" bindconfirm="search"/>
+        <view class="search-btn" bindtap="cancel">取消</view>
+      </view>
+  </view>
   <view class="nav">
     <view class="nav-btn {{listShow ? 'nav-font-color':''}}" bindtap="find" data-type="1">找失主</view>
     <view class="nav-border"></view>
     <view class="nav-btn {{!listShow ? 'nav-font-color':''}}" bindtap="find" data-type="2">寻失物</view>
   </view>
   <view wx:if="{{ listShow }}">
-    <view class="article-list" wx:for="{{articleList}}" wx:key="{{item.id}}">
+    <view class="article-list" wx:for="{{articleList}}" wx:key="{{item.id}}" bindtap="toLostOwnerDetails" data-postNo="{{item.lostArticleNo}}">
       <view class="article-list-img">
         <image src="{{item.url}}"></image>
       </view>

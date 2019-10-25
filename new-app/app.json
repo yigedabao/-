@@ -1,12 +1,15 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/message/message",
     "pages/user/user",
     "pages/user/release",
-    "pages/home/details"
+    "pages/home/details",
+    "pages/user/lostowner",
+    "pages/index/index",
+    "pages/user/lostproperty",
+    "pages/message/lostOwnerDetails"
   ],
   "window": {
     "backgroundTextStyle": "light",

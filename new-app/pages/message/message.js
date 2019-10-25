@@ -1,4 +1,5 @@
 // pages/message/message.js
+const api = require('../../utils/api.js')
 Page({
 
   /**
@@ -6,6 +7,7 @@ Page({
    */
   data: {
     listShow: true,
+    inputVal: '',
     articleList: [
       {
         id:'1',
@@ -72,6 +74,20 @@ Page({
     ],
     
   },
+  search: function () {
+    this.getList(this.data.inputVal)
+  },
+  cancel() {
+    this.setData({
+      inputVal: ''
+    })
+    this.getList(this.data.inputVal)
+  },
+  inputTyping: function (e) {
+    this.setData({
+      inputVal: e.detail.value
+    })
+  },
   find:function(e){
     var that = this;
     let type = e.currentTarget.dataset['type'];
@@ -85,11 +101,34 @@ Page({
       })
     }
   },
+  getList: function (inputVal) {
+    let param = {
+      lostName: inputVal,
+      pageSize: 10,
+      page: 1
+    }
+    api._get('/ques/list', param).then(res => {
+      if (res.success) {
+        this.setData({
+          forumList: res.returnData
+        })
+      } else {
+        console.log('服务器异常');
+      }
+    })
+  },
+  toLostOwnerDetails: function (e) {
+    console.log(e)
+    let lostArticleNo = e.currentTarget.dataset['lostarticleno'];
+    wx.navigateTo({
+      url: '../message/lostOwnerDetails?lostArticleNo=' + lostArticleNo
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getList(23)
   },
   /**
    * 页面上拉触底事件的处理函数

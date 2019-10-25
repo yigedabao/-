@@ -6,8 +6,11 @@
   justify-content: space-between;
   box-sizing: border-box;
   align-items: center;
-  border-bottom: 1rpx solid #dedede;
   line-height: 70rpx; 
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%)
 }
 .userinfo-avatar {
   width: 128rpx;

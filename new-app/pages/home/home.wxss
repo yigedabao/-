@@ -5,6 +5,19 @@
   padding-top: 20rpx;
   background: #ededed;
 }
+.search-btn{
+  width: 20%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  position: absolute;
+  right: -15rpx;
+  top: 0;
+  border: none;
+  outline: none;
+  background:#ededed; 
+}
 .search{
   width: 80%;
   height: 80rpx;
@@ -21,7 +34,7 @@ icon{
   top: 16rpx;
 }
 .search-input{
-  width: 100%;
+  width: 75%;
   height: 80rpx;
   display: inline-block;
 }
@@ -38,7 +51,7 @@ icon{
 }
 .banner .forum .title{
   font-weight: 600;
-  height: 90rpx;
+  height: 50rpx;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;

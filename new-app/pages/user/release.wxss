@@ -1,1 +1,160 @@
 /* pages/user/release.wxss */
+page {
+  background: #f7f7f9;
+} 
+.article-input-area{
+  height: 500rpx;
+  background: #fff;
+  margin: 30rpx;
+  overflow: hidden;
+}
+.article-title-wrap{
+  margin: 30rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #dedede;
+  display: flex;
+  justify-content: space-between
+}
+.article-title{
+  width: 80%;
+}
+.article-input-counter{
+  color: #b5b5b5;
+}
+.content-cell{
+  margin: 0 30rpx;
+}
+.content-cell__bd{
+  height: 370rpx;
+  position: relative;
+}
+.content-textarea{
+  width: 100%;
+  height: 330rpx;
+}
+.content-textarea-counter{
+  color: #b5b5b5;
+  position: absolute;
+  bottom: 0;
+  right: 0
+}
+
+.imgbtn-wrap{
+  padding: 0 50rpx;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.imgbtn-addimg{
+  margin-left: 10rpx;
+  margin-bottom: 10rpx;
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+  line-height: 180rpx;
+  font-size: 100rpx;
+  background: #ededed;
+  color: #a5a5a5;
+}
+.q-image-wrap{
+  position: relative
+}
+.q-image{
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 10rpx;
+  margin-bottom: 10rpx;
+  border: 1rpx solid #dedede;
+}
+.q-image-remover{
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
+}
+.article-btn{
+  width: 60%;
+  margin: 100rpx auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .hrader{
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+}
+.release-btn{
+  width: 100rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background: green; 
+  color: #fff;
+  position: absolute;
+  right: 40rpx;
+  top: 20rpx;
+}
+.input-box{
+  padding: 20rpx 60rpx;
+  box-sizing: border-box;
+}
+.input-box-textarea{
+  width: 100%;
+  height: 260rpx;
+}
+.img-box{
+  padding: 0 60rpx;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-box image{
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 10rpx;
+  margin-bottom: 10rpx;
+}
+.img-box-addimg{
+  margin-left: 10rpx;
+  margin-bottom: 10rpx;
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+  line-height: 180rpx;
+  font-size: 100rpx;
+  background: #ededed;
+  color: #a5a5a5;
+} */
